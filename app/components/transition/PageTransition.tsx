@@ -1,12 +1,11 @@
 "use client"
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import { forwardRef } from 'react'
 
-function PageTransition({children}, ref){
-
-    const initialPos = {x:'100%'};
-    const endPos = {x:0};
-    const transition = { duration: 0.25, ease: 'easeIn'};
+function PageTransition({ children }, ref) {
+    const initialPos = { x: '100%' };
+    const endPos = { x: 0 };
+    const transition = { duration: 0.25, ease: 'easeIn' };
     return (
         <motion.div
             ref={ref}
