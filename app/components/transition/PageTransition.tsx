@@ -1,8 +1,9 @@
+"use client"
 import {motion} from 'framer-motion'
-import { forwardRef } from 'react';
+import { forwardRef } from 'react'
 
+function PageTransition({children}, ref){
 
-function PageTransition({ref, children}){
     const initialPos = {x:'100%'};
     const endPos = {x:0};
     const transition = { duration: 0.25, ease: 'easeIn'};

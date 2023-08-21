@@ -1,0 +1,42 @@
+@use '../components/util.scss' as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: whitesmoke;
+};
+
+.list {
+  @include device-small{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @include device-medium{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  @include device-large{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+
+  padding: $item-padding-small;
+}
+

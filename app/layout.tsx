@@ -1,11 +1,11 @@
-'use client'
-
+"use client"
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Navigation from './components/navigation/navigation'
+import Navigation from './components/navigation/Navigation'
 import Head from '@/node_modules/next/head'
 import { AnimatePresence } from 'framer-motion'
+import {makeServer} from './mirage'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +19,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
       <Head>
